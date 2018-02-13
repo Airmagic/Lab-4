@@ -34,7 +34,12 @@ class TestStudentLists(TestCase):
 
     ## TODO write a test that adds and removes a student, and asserts the student is removed. Use assertNotIn
     def test_add_and_remove_student(self):
-        pass
+        test_class = ClassList(1)
+        test_class.add_student('Steve')
+        self.assertIn('Steve', test_class.class_list)
+
+        test_class.remove_student('Steve')
+        self.assertNotIn('Steve', test_class.class_list)
 
 
     ## TODO write a test that removes a student not in the list, and asserts a StudentError is raised
