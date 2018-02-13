@@ -108,7 +108,8 @@ class TestStudentLists(TestCase):
     ## However, it would be useful to check that index_of_student returns None if a student isn't present.
     ## TODO write a test for index_of_student to assert it returns None if the student is not in the list if the list is empty. use assertIsNone.
     def test_index_of_students_for_none_if_list_is_empty(self):
-        pass
+        test_class = ClassList(4)
+        self.assertIsNone(test_class.index_of_student("Billy Bob"))
 
     ## TODO write another test when the list is not empty but does not contain the student name, assert that the correct index is returned.
     def test_none_empty_list_but_no_student_name(self):
