@@ -44,7 +44,9 @@ class TestStudentLists(TestCase):
 
     ## TODO write a test that removes a student not in the list, and asserts a StudentError is raised
     def test_remove_student_not_in_list(self):
-        pass
+        test_class = ClassList(1)
+        with self.assertRaises(StudentError):
+            test_class.remove_student('Clyde')
 
     ## TODO write a test that removes a student from an empty list, and asserts a StudentError is raised
     def test_remove_student_empty_list(self):
